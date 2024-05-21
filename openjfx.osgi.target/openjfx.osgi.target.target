@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<target name="OpenJFX OSGi Target Platform" sequenceNumber="1568034040">
+	<locations>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Base/Controls/FXML" missingManifest="generate" type="Maven">
+        	<!-- javafx-base, javafx-controls, javafx-fxml, javafx-swing do not contain native artefacts -->
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-base</artifactId>
+                	<version>17.0.11</version>
+                    <classifier>win</classifier>
+                	<type>jar</type>
+            	</dependency>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-controls</artifactId>
+                	<version>17.0.11</version>
+                    <classifier>win</classifier>
+                	<type>jar</type>
+            	</dependency>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-fxml</artifactId>
+                	<version>17.0.11</version>
+                    <classifier>win</classifier>
+                	<type>jar</type>
+            	</dependency>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-swing</artifactId>
+                	<version>17.0.11</version>
+                    <classifier>win</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+]]></instructions>
+    	</location>
+    	
+    	<!-- openjfx-graphics with javafx-swt -->
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Graphics Linux" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-graphics</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>linux</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.linux_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Graphics Mac x86_64" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-graphics</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>mac</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.mac_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Graphics Mac aarch64" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-graphics</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>mac-aarch64</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.mac_aarch64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=aarch64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Graphics Win" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-graphics</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>win</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.win_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	
+    	<!-- openjfx-media -->
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Media Linux" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-media</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>linux</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.linux_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Media Mac x86_64" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-media</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>mac</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.mac_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Media Mac aarch64" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-media</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>mac-aarch64</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.mac_aarch64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=aarch64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Media Win" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-media</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>win</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.win_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	
+    	<!-- openjfx-web -->
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Web Linux" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-web</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>linux</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.linux_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Web Mac x86_64" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-web</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>mac</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.mac_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Web Mac aarch64" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-web</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>mac-aarch64</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.mac_aarch64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=aarch64) )
+]]></instructions>
+    	</location>
+    	<location includeDependencyDepth="none" includeDependencyScopes="compile,runtime" includeSource="true" label="JavaFX Web Win" missingManifest="generate" type="Maven">
+        	<dependencies>
+            	<dependency>
+                	<groupId>org.openjfx</groupId>
+                	<artifactId>javafx-web</artifactId>
+                	<version>17.0.11</version>
+                	<classifier>win</classifier>
+                	<type>jar</type>
+            	</dependency>
+        	</dependencies>
+        	<instructions><![CDATA[
+Bundle-Name:           ${mvnGroupId}.${mvnArtifactId}
+version:               ${version_cleanup;${mvnVersion}}
+Bundle-SymbolicName:   ${mvnGroupId}.${mvnArtifactId}.win_x86_64
+Bundle-Version:        ${version}
+Import-Package:        *;resolution:=optional
+Export-Package:        *;version="${version}";-noimport:=true
+DynamicImport-Package: *
+Bundle-ClassPath: ., javafx-swt.jar
+Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86_64) )
+]]></instructions>
+    	</location>
+    	
+	</locations>
+</target>

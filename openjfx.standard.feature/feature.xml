@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="openjfx.standard.feature"
+      label="JavaFX Base/Controls/FXML/Graphics Feature"
+      version="17.0.11.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="org.openjfx.javafx-base"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.openjfx.javafx-controls"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.openjfx.javafx-fxml"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.openjfx.javafx-graphics.linux_x86_64"
+         os="linux"
+         arch="x86_64"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.openjfx.javafx-graphics.mac_aarch64"
+         os="macosx"
+         arch="aarch64"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.openjfx.javafx-graphics.mac_x86_64"
+         os="macosx"
+         arch="x86_64"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.openjfx.javafx-graphics.win_x86_64"
+         os="win32"
+         arch="x86_64"
+         version="0.0.0"/>
+
+</feature>

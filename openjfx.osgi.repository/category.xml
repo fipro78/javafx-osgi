@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="openjfx.media.feature">
+      <category name="openjfx"/>
+   </feature>
+   <feature id="openjfx.standard.feature">
+      <category name="openjfx"/>
+   </feature>
+   <feature id="openjfx.swing.feature">
+      <category name="openjfx"/>
+   </feature>
+   <feature id="openjfx.web.feature">
+      <category name="openjfx"/>
+   </feature>
+   <category-def name="openjfx" label="Repackaged OpenJFX"/>
+</site>
