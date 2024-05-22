@@ -42,6 +42,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 ]]></instructions>
     	</location>
     	
@@ -65,6 +66,7 @@ Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
 Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -87,6 +89,7 @@ Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
 Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -109,6 +112,7 @@ Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
 Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=aarch64) )
 ]]></instructions>
     	</location>
@@ -131,6 +135,7 @@ Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
 Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -154,7 +159,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -176,7 +181,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -198,7 +203,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=aarch64) )
 ]]></instructions>
     	</location>
@@ -220,7 +225,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -244,7 +249,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=linux) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -266,7 +271,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
@@ -288,7 +293,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=macosx) (osgi.arch=aarch64) )
 ]]></instructions>
     	</location>
@@ -310,7 +315,7 @@ Bundle-Version:        ${version}
 Import-Package:        *;resolution:=optional
 Export-Package:        *;version="${version}";-noimport:=true
 DynamicImport-Package: *
-Bundle-ClassPath: ., javafx-swt.jar
+Java-Module: ${replacestring;${mvnArtifactId};-;.}
 Eclipse-PlatformFilter: (& (osgi.os=win32) (osgi.arch=x86_64) )
 ]]></instructions>
     	</location>
